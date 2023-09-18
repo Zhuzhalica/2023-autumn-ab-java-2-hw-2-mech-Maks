@@ -24,6 +24,13 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.28</version>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
 
   <build>
@@ -37,15 +44,15 @@
           <target>${java.version}</target>
         </configuration>
 
-<!--        <executions>-->
-<!--          <execution>-->
-<!--            <id>kek-id</id>-->
-<!--            <phase>pre-clean</phase>-->
-<!--            <goals>-->
-<!--              <goal>compile</goal>-->
-<!--            </goals>-->
-<!--          </execution>-->
-<!--        </executions>-->
+        <executions>
+          <execution>
+            <id>kek-id</id>
+            <phase>post-clean</phase>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
